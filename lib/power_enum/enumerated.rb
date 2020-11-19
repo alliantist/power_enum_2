@@ -174,7 +174,7 @@ module PowerEnum::Enumerated
     # Returns all the enum values.  Caches results after the first time this method is run.
     def all
       return @all if @all
-      @all = load_all.collect{|val| val.freeze}.freeze
+      @all = load_all
     end
 
     # Returns all the active enum values.  See the 'active?' instance method.
